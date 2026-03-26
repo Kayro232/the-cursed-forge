@@ -1,0 +1,15 @@
+# Godot 4+
+.godot/
+
+# Imports 
+.import/
+
+# Exportaciones
+.export/
+.export_presets.cfg
+
+# Android
+/android/
+
+# Archivos innecesarios
+*.translation
