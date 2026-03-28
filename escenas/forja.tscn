@@ -1,3 +1,71 @@
 [gd_scene format=3 uid="uid://bn78pih5r450j"]
 
+[ext_resource type="Script" uid="uid://bnjikpsu554n8" path="res://scripts/forja.gd" id="1_vfmkg"]
+[ext_resource type="Texture2D" uid="uid://btyihiig671dh" path="res://sprites/icon.svg" id="2_brm8n"]
+[ext_resource type="Texture2D" uid="uid://d4gtgw4576pcd" path="res://sprites/add.png" id="3_y3qef"]
+
 [node name="Node2D" type="Node2D" unique_id=742608182]
+script = ExtResource("1_vfmkg")
+
+[node name="Control" type="Control" parent="." unique_id=862232214]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control" unique_id=941280353]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 948.0
+offset_right = 302.0
+offset_bottom = 1062.0
+text = "FORJAR"
+
+[node name="Button2" type="Button" parent="Control" unique_id=1324538572]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 943.0
+offset_right = 659.0
+offset_bottom = 1051.0
+text = "COMBINAR"
+
+[node name="yunque" type="Sprite2D" parent="Control" unique_id=2112482789]
+position = Vector2(365, 787)
+scale = Vector2(1.890625, 1)
+texture = ExtResource("2_brm8n")
+
+[node name="materiales3" type="Sprite2D" parent="Control" unique_id=145676014]
+position = Vector2(70, 74)
+scale = Vector2(0.765625, 0.8203125)
+texture = ExtResource("2_brm8n")
+
+[node name="materiales" type="Sprite2D" parent="Control" unique_id=510018847]
+position = Vector2(353, 75)
+scale = Vector2(0.78125, 0.828125)
+texture = ExtResource("2_brm8n")
+
+[node name="materiales2" type="Sprite2D" parent="Control" unique_id=1020499226]
+position = Vector2(627, 80.00001)
+scale = Vector2(0.6328125, 0.6953125)
+texture = ExtResource("2_brm8n")
+
+[node name="combinar" type="Sprite2D" parent="Control" unique_id=736763479]
+visible = false
+position = Vector2(156, 572)
+scale = Vector2(5.59375, 5.5625)
+texture = ExtResource("3_y3qef")
+
+[node name="combinar2" type="Sprite2D" parent="Control/combinar" unique_id=1413853973]
+position = Vector2(75.97765, 0.5393219)
+texture = ExtResource("3_y3qef")
+
+[node name="forjar" type="Sprite2D" parent="Control" unique_id=943067494]
+position = Vector2(378.99997, 579)
+scale = Vector2(5.59375, 5.5625)
+texture = ExtResource("3_y3qef")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=116846572]
+position = Vector2(368, 629)
+
+[connection signal="button_down" from="Control/Button" to="." method="forjar_button"]
+[connection signal="button_down" from="Control/Button2" to="." method="combinar_button"]

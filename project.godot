@@ -11,13 +11,23 @@ config_version=5
 [application]
 
 config/name="the forge"
+run/main_scene="uid://bn78pih5r450j"
 config/features=PackedStringArray("4.6", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://sprites/icon.svg"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/stretch/mode="canvas_items"
 
 [file_customization]
 
 folder_colors={
-"res://escenas/": "red"
+"res://escenas/": "red",
+"res://musica/": "green",
+"res://scripts/": "purple",
+"res://sprites/": "orange"
 }
 
 [physics]
@@ -26,5 +36,6 @@ folder_colors={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
